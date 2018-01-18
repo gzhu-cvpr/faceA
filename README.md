@@ -37,9 +37,9 @@ Last,cd the faceA/faceA
 python main.py  
 
 ## How to use：
-you can upload your pic which you want to get the information about  
-and then the program will show you the result after click the button  
-the result just like  
+you can upload your pic which you want to get the information about.  
+and then the program will show you the result after click the button.  
+the result will just like  
 [Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/examples/testpic.png)
 
 
