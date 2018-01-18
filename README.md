@@ -27,7 +27,7 @@ dist是发行版的文件夹
 
 
 ## The Docs Link:
-[TODOLIST](faceA/docs/todolist)
+[TODOLIST](https://github.com/ThomasRaymond/faceA/blob/master/docs/todolist)
 
 ## How to install：
 
