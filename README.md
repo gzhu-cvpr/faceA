@@ -5,7 +5,7 @@
 ├─.idea  
 ├─dist   放置发行版  
 ├─docs   放置说明文档，在此项目无实际作用  
-├─examples  放置样例，在此项目无实际作用  
+├─examples  放置样例，放置运行结果的picture
 ├─extras   放置额外文件，在此项目无实际作用   
 ├─faceA  
 │  ├─.idea  
@@ -27,7 +27,7 @@ dist是发行版的文件夹
 
 
 ## The Docs Link:
-
+[TODOLIST](https://github.com/ThomasRaymond/faceA//docs/todolist)
 
 ## How to install：
 
