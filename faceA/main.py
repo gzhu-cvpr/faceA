@@ -105,7 +105,7 @@ class mainD(QWidget):
                 if not (filepath[-4:] == '.png' or filepath[-4:] == '.jpg'):
                     print(file + "不是jpg或者png文件")
                 else:
-                    result = utils.getPicAnalysisResult(filepath)
+                    result = MyUtils.getPicAnalysisResult(filepath)
                     os.rename(filepath, self.havedonedPath + '\\' + str(i) + filepath[-4:])
                     fjson = open(self.havedonedPath + '\\' + str(i) + ".json", 'w')
                     fjson.write(result)
