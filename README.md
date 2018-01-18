@@ -30,16 +30,16 @@ dist是发行版的文件夹
 [TODOLIST](https://github.com/ThomasRaymond/faceA/blob/master/docs/todolist)
 
 ## How to install：
-need the python version>3.0
-and then
-pip install -r requirements.txt
-Last,cd the faceA/faceA
-python main.py
+need the python version>3.0  
+and then  
+pip install -r requirements.txt  
+Last,cd the faceA/faceA  
+python main.py  
 
 ## How to use：
-you can upload your pic which you want to get the information about
-and then the program will show you the result after click the button
-the result just like
+you can upload your pic which you want to get the information about  
+and then the program will show you the result after click the button  
+the result just like  
 [Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/examples/testpic.png)
 
 
