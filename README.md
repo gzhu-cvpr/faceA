@@ -3,7 +3,7 @@
 
 ## Project structure:
 ├─.idea  
-├─dist   放置发行版 <br>
+├─dist   放置发行版
 ├─docs   放置说明文档，在此项目无实际作用
 ├─examples  放置样例，在此项目无实际作用
 ├─extras   放置额外文件，在此项目无实际作用   
