@@ -1,13 +1,13 @@
 # -*- coding:utf-8 -*-
 
-import os,_thread,sys,time,json,copy
+import os,_thread,sys,json,copy
 
 from PyQt5 import QtWidgets,QtCore
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QWidget, QFileDialog
 from PyQt5.QtCore import pyqtSignal,QThread
 
-import utils
+import MyUtils
 from  ui.ui_source.Form_main import Ui_Form_main
 from  ui.Dia_alter import Alter_Dialog
 from  ui.Dia_doAllFile import DoAllFile_Dialog
@@ -73,7 +73,7 @@ class mainD(QWidget):
         if not (self.picpath[-4:]=='.png' or self.picpath[-4:]=='.jpg'):
             Alter_Dialog("警报","请选择jpg或者png文件").exec_()
         else:
-            self.showResult(utils.getPicAnalysisResult(self.picpath))
+            self.showResult(MyUtils.getPicAnalysisResult(self.picpath))
 
     def openUnProcesssedFile_button_connect(self):
          os.system("explorer.exe %s" % self.undoPath)
