@@ -73,6 +73,6 @@ The result will just like
 [Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/docs/testpic.png)
 
 <p align='center'>
-<img src='examples/testpic.png' title='Face Attributes Recognition example' style='max-width:600px'></img>
+<img src='docs/testpic.png' title='Face Attributes Recognition example' style='max-width:600px'></img>
 </p>
 
