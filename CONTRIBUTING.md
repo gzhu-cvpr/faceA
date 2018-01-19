@@ -1,10 +1,7 @@
-别人访问github时候，自动提示这个文件
+## How to contribute to faceA
 
-How to contribute to faceA
+## Support question
 
-Support question
+## Reporting issues
 
-
-Reporting issues
-
-Submitting patches
+## Submitting patches
