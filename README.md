@@ -2,6 +2,7 @@
 这是一个基于pyqt的gui客户端程序，主要用来展示人脸属性识别的结果。目前调用了face++旷视公司的接口，此后会改造成，调用自己队伍训练结果的接口。
 
 ## Project structure:
+``` proj structure
 │  AUTHORS  
 │  CONTRIBUTING.md  
 │  LICENSE  
@@ -33,7 +34,7 @@
 ├─scripts               放置可执行文件  
 └─tests                 放置测试样例  
 
-
+```
 
   为了避免项目更加复杂，减去了一些目录模板，但是为了以后的项目架构，做出说明（这个项目README简直就是给我以后自己看的，逃）
 
@@ -61,8 +62,8 @@ python main.py
 ```
 
 ## How to use：
-You can upload your pic which you want to get the information about.  
-And then the program will show you the result after click the button.  
+You can upload your pic which you want to get the information about.   
+And then the program will show you the result after click the button.    
 The result will just like  
 [Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/examples/testpic.png)
 
