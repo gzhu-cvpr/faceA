@@ -70,7 +70,7 @@ python main.py
 You can upload your pic which you want to get the information about.  
 And then the program will show you the result after click the button.    
 The result will just like  
-[Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/examples/testpic.png)
+[Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/docs/testpic.png)
 
 <p align='center'>
 <img src='examples/testpic.png' title='Face Attributes Recognition example' style='max-width:600px'></img>
