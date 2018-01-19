@@ -43,26 +43,31 @@
 不需要dba目录，因为没有数据库。  
 不需要examples。因为这里不是库，本身具有程序实现，不需要例子   
 dist是发行版的文件夹  
-
-
+  
+    
+    
 ## The Docs Link:
 [TODOLIST](https://github.com/ThomasRaymond/faceA/blob/master/docs/todolist)
-
+  
+    
+    
 ## Installation：
 ### Requirrments
 * python 3.0+
 * requests (>2.13.0)
 * PyQt5(>5.8.0)
-
+  
+  
 ### install and run
 ```bash
 pip install -r requirements.txt
 cd  faceA/faceA
 python main.py  
 ```
-
+  
+  
 ## How to use：
-You can upload your pic which you want to get the information about.   
+You can upload your pic which you want to get the information about.  
 And then the program will show you the result after click the button.    
 The result will just like  
 [Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/examples/testpic.png)
