@@ -2,36 +2,36 @@
 这是一个基于pyqt的gui客户端程序，主要用来展示人脸属性识别的结果。目前调用了face++旷视公司的接口，此后会改造成，调用自己队伍训练结果的接口。
 
 ## Project structure:
-│  AUTHORS
-│  CONTRIBUTING.md
-│  LICENSE
-│  Makefile
-│  README.md
-│  requirements.txt
-│  setup.py
-│  todolist
-├─dist                  放置发行版
-├─docs                  放置说明文档，
-├─examples              放置样例，放置运行结果的picture
-├─extras                放置额外文件，在此项目无实际作用
-├─faceA
-│  │  main.py
-│  │  MyException.py
-│  │  MyUtils.py
-│  ├─logs              放置log文件
-│  ├─resource
-│  │  ├─pic_havedone
-│  │  ├─pic_undo
-│  │  └─usr_save
-│  └─ui  ui模块
-│      ├─ui_base       放置 qt designer的布局文件
-│      ├─ui_source     放置qtuic自动生成的文件
-│      │  │  Dia_alter.py
-│      │  │  Dia_PBar.py
-│      │  │  Form_main.py
+│  AUTHORS  
+│  CONTRIBUTING.md  
+│  LICENSE  
+│  Makefile  
+│  README.md  
+│  requirements.txt  
+│  setup.py  
+│  todolist  
+├─dist                  放置发行版  
+├─docs                  放置说明文档   
+├─examples              放置样例，放置运行结果的picture  
+├─extras                放置额外文件，在此项目无实际作用  
+├─faceA  
+│  │  main.py  
+│  │  MyException.py  
+│  │  MyUtils.py  
+│  ├─logs              放置log文件  
+│  ├─resource  
+│  │  ├─pic_havedone  
+│  │  ├─pic_undo  
+│  │  └─usr_save  
+│  └─ui  ui模块  
+│      ├─ui_base       放置 qt designer的布局文件  
+│      ├─ui_source     放置qtuic自动生成的文件  
+│      │  │  Dia_alter.py  
+│      │  │  Dia_PBar.py  
+│      │  │  Form_main.py  
 │
-├─scripts               放置可执行文件
-└─tests                 放置测试样例
+├─scripts               放置可执行文件  
+└─tests                 放置测试样例  
 
 
 
@@ -61,9 +61,9 @@ python main.py
 ```
 
 ## How to use：
-you can upload your pic which you want to get the information about.  
-and then the program will show you the result after click the button.  
-the result will just like  
+You can upload your pic which you want to get the information about.  
+And then the program will show you the result after click the button.  
+The result will just like  
 [Example:Lenna.png](https://github.com/ThomasRaymond/faceA/blob/master/examples/testpic.png)
 
 <p align='center'>
