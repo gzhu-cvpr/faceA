@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d72bae2d-8d12-458c-957f-9788caccb431" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="faceA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-161">
+              <first_editor relative-caret-position="529">
                 <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
                 <folding />
               </first_editor>
@@ -753,7 +752,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516536420056</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="new">
+      <created>1516536460854</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1516536460854</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1195,7 +1201,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-161">
+          <first_editor relative-caret-position="529">
             <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
             <folding />
           </first_editor>
