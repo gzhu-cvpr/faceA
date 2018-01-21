@@ -6,11 +6,9 @@
 │  AUTHORS  
 │  CONTRIBUTING.md  
 │  LICENSE  
-│  Makefile  
-│  README.md  
+│  README.md
 │  requirements.txt  
-│  setup.py  
-│  todolist  
+│  setup.py
 ├─dist                  放置发行版  
 ├─docs                  放置说明文档   
 ├─examples              放置样例，放置运行结果的picture  
