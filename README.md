@@ -11,24 +11,17 @@
 │  setup.py
 ├─dist                  放置发行版  
 ├─docs                  放置说明文档   
-├─examples              放置样例，放置运行结果的picture  
+├─examples              放置样例，在此项目无实际作用
 ├─extras                放置额外文件，在此项目无实际作用  
 ├─faceA  
-│  │  main.py  
-│  │  MyException.py  
-│  │  MyUtils.py  
-│  ├─logs              放置log文件  
-│  ├─resource  
-│  │  ├─pic_havedone  
-│  │  ├─pic_undo  
-│  │  └─usr_save  
+│  │  main.py           主函数
+│  │  MyException.py    自定义异常类
+│  │  MyUtils.py        自定义工具类
+│  │  myapp.logs        log文件
+│  ├─resource          放置资源文件
 │  └─ui  ui模块  
 │      ├─ui_base       放置 qt designer的布局文件  
 │      ├─ui_source     放置qtuic自动生成的文件  
-│      │  │  Dia_alter.py  
-│      │  │  Dia_PBar.py  
-│      │  │  Form_main.py  
-│
 ├─scripts               放置可执行文件  
 └─tests                 放置测试样例  
 
