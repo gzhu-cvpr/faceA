@@ -17,7 +17,7 @@ def getPicAnalysisResult(pngpath):  # 根据路径解析对应的图片
     """
     # 检验图片是否存在
     if not os.path.exists(pngpath):
-        raise MyException.FileNotFounfdException(pngpath+" 文件没有找到")
+        raise MyException.FileNotFounfdException(pngpath + " 文件没有找到")
 
     # 按照api文档调用face++的api，进行解析
     http_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
@@ -41,12 +41,14 @@ def getPicAnalysisResult(pngpath):  # 根据路径解析对应的图片
         result = response.content.decode('utf-8')
 
     except Exception as e:
-        raise MyException.PicRequestException(pngpath+e.__class__+e.__str__())
+        raise MyException.PicRequestException(pngpath + e.__class__ + e.__str__())
 
     return result
 
 
 import logging
+
+
 def getLogger(name):
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)

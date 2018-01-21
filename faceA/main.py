@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-import os, _thread, sys, json, copy
+import os, _thread, sys, json
 
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QPixmap
@@ -33,6 +33,8 @@ class mainD(QWidget):
         # 初始化一些要用到的变量
         self.picpath = ''
         self.result = ''
+        self.picnum_toshow=0
+        self.picnum_haveshow=0
         self.undoPath = r'.\resource\pic_undo'
         self.havedonedPath = r'.\resource\pic_havedone'
         self.doallfilethread = None
@@ -47,7 +49,13 @@ class mainD(QWidget):
                 self.doallfilethread.thread_status = 1
                 self.ui.pushButton_6.setText("暂停展示")
                 return
+
+        self.picnum_haveshow=0
+        self.picnum_toshow=int(len(os.listdir(self.havedonedPath))/2)
+        self.ui.label_4.setText(str(self.picnum_haveshow)+"/"+str(self.picnum_toshow))
+
         self.doallfilethread = showFileThread()
+
         self.ui.pushButton_6.setText("暂停展示")
         self.doallfilethread.shownew_signal.connect(self.showPicAndResult_connect)
         self.doallfilethread.setPath(self.havedonedPath)
@@ -57,6 +65,8 @@ class mainD(QWidget):
     def stopShowResult_button_connect(self):
         if not self.doallfilethread == None:
             self.ui.pushButton_6.setText("展示识别结果")
+            self.picnum_haveshow = 0
+            self.ui.label_4.setText(str(self.picnum_haveshow) + "/" + str(self.picnum_toshow))
             self.doallfilethread.thread_status = -1
 
     def openfile_button_connect(self):
@@ -106,6 +116,10 @@ class mainD(QWidget):
         self.ui.label.setPixmap(pic)
         self.picpath = picpath
         self.showResult(result)
+        self.picnum_haveshow+=1
+        self.ui.label_4.setText(str(self.picnum_haveshow)+"/"+str(self.picnum_toshow))
+        if(self.picnum_haveshow==self.picnum_toshow):
+            self.ui.pushButton_6.setText("展示识别结果")
 
     def doAllFileinThread_threadfunction(self, dfb, havedonedPath, undoPath):
         i = (int)(len(os.listdir(havedonedPath)) / 2)
@@ -133,7 +147,7 @@ class mainD(QWidget):
 
                     os.rename(filepath, os.path.join(self.havedonedPath, str(i)) + filepath[-4:])
                     try:
-                        fjson = open(os.path.join(self.havedonedPath, str(i))+ ".json", 'w')
+                        fjson = open(os.path.join(self.havedonedPath, str(i)) + ".json", 'w')
                         fjson.write(result)
                         i += 1
                         fjson.close()
