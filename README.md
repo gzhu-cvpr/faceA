@@ -21,7 +21,7 @@
 │  ├─resource          放置资源文件
 │  └─ui  ui模块  
 │      ├─ui_base       放置 qt designer的布局文件  
-│      ├─ui_source     放置qtuic自动生成的文件  
+│      ├─ui_source     放置qtuic自动生成的文件
 ├─scripts               放置可执行文件  
 └─tests                 放置测试样例  
 
