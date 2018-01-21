@@ -43,29 +43,28 @@ def getPicAnalysisResult(pngpath):  # 根据路径解析对应的图片
 
 
     except Exception as e:
-        print(e)
-        return None
+        getLogger("getPicAnalysisResult").error(e.__class__+e.__str__())
+        raise MyException.PicRequestException(e.__class__+e.__str__())
 
     return result
 
 
 import logging
-def geLogger(name):
+def getLogger(name):
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)
-
-    fh = logging.FileHandler(".\myapp.log")
-    fh.setLevel(logging.DEBUG)
-
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.ERROR)
-
     formatter = logging.Formatter("%(asctime)s - %(name)s[line:%(lineno)d] %(levelname)s - %(message)s")
-    ch.setFormatter(formatter)
-    fh.setFormatter(formatter)
 
-    logger.addHandler(ch)
-    logger.addHandler(fh)
+    if not logger.handlers:
+        fh = logging.FileHandler(".\myapp.log")
+        fh.setLevel(logging.DEBUG)
+        fh.setFormatter(formatter)
+        logger.addHandler(fh)
+
+        ch = logging.StreamHandler()
+        ch.setLevel(logging.ERROR)
+        ch.setFormatter(formatter)
+        logger.addHandler(ch)
 
     return logger
 

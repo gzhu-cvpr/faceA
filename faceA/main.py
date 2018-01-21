@@ -73,7 +73,11 @@ class mainD(QWidget):
         if not (self.picpath[-4:]=='.png' or self.picpath[-4:]=='.jpg'):
             Alter_Dialog("警报","请选择jpg或者png文件").exec_()
         else:
-            self.showResult(MyUtils.getPicAnalysisResult(self.picpath))
+            try:
+                self.showResult(MyUtils.getPicAnalysisResult(self.picpath))
+            except:
+                pass  #TODO
+
 
     def openUnProcesssedFile_button_connect(self):
          os.system("explorer.exe %s" % self.undoPath)
@@ -100,17 +104,25 @@ class mainD(QWidget):
         for root, dirs, files in os.walk(self.undoPath):
             for file in files:
                 filepath = root + '\\' + file
-                print(filepath)
+                MyUtils.getLogger(__name__).info("读取 "+filepath)
                 # 判断用户选择的文件是否符合要求，这里只支持png和jpg
                 if not (filepath[-4:] == '.png' or filepath[-4:] == '.jpg'):
-                    print(file + "不是jpg或者png文件")
+                    MyUtils.getLogger(__name__).info(file + "不是jpg或者png文件")
                 else:
-                    result = MyUtils.getPicAnalysisResult(filepath)
+                    try:
+                        result = MyUtils.getPicAnalysisResult(filepath)
+                    except:
+                        pass  #TODO
+
                     os.rename(filepath, self.havedonedPath + '\\' + str(i) + filepath[-4:])
-                    fjson = open(self.havedonedPath + '\\' + str(i) + ".json", 'w')
-                    fjson.write(result)
-                    i += 1
-                    fjson.close()
+                    try:
+                        fjson = open(self.havedonedPath + '\\' + str(i) + ".json", 'w')
+                        fjson.write(result)
+                        i += 1
+                        fjson.close()
+                    except:
+                        MyUtils.getLogger(__name__).error("open " + self.havedonedPath + " failed")
+
                 dfb.ui.progressBar.setValue(100*(i-j)/num_undo)
         dfb.ui.progressBar.setValue(100)
         dfb.ui.label.setText("识别已经完成")
@@ -123,7 +135,11 @@ class mainD(QWidget):
 
 
     def showResult(self, result):
-        resultobj = json.JSONDecoder().decode(result)
+        try:
+            resultobj = json.JSONDecoder().decode(result)
+        except:
+            pass   #TODO
+
         text=''
         j=0
         for i in resultobj['faces']:
@@ -188,20 +204,22 @@ class showFileThread(QThread):
                     if not (filepath[-4:] == '.png' or filepath[-4:] == '.jpg'):
                         pass
                     else:
-                        print(filepath[:-4])
                         pic = QPixmap(filepath)
                         if pic.isNull():
-                            print("警报", "图片转换出现错误")
+                            MyUtils.getLogger(__name__).error("警报", "图片转换出现错误")
                         else:
                             # 按与控件的比例，对图像进行缩放
                             if pic.width() / pic.height() > self.wid / self.he:
                                 pic = pic.scaled(self.wid, pic.height() * self.wid / pic.width())
                             else:
                                 pic = pic.scaledToHeight(pic.width() * self.he/ pic.height(),self.he)
-                        file = open(filepath[:-4] + '.json')
-                        result = file.read()
-                        file.close()
-                        self.shownew_signal.emit(pic, result)
+                        try:
+                            file = open(filepath[:-4] + '.json')
+                            result = file.read()
+                            file.close()
+                            self.shownew_signal.emit(pic, result)
+                        except:
+                            MyUtils.getLogger(__name__).error("open "+filepath+" failed")
                         self.sleep(3)
                 elif self.thread_status==-1:
                     return
