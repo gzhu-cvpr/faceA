@@ -7,10 +7,10 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QWidget, QFileDialog
 from PyQt5.QtCore import pyqtSignal,QThread
 
-import MyUtils
-from  ui.ui_source.Form_main import Ui_Form_main
-from  ui.Dia_alter import Alter_Dialog
-from  ui.Dia_doAllFile import DoAllFile_Dialog
+from faceA import MyUtils
+from  faceA.ui.ui_source.Form_main import Ui_Form_main
+from  faceA.ui.Dia_alter import Alter_Dialog
+from  faceA.ui.Dia_doAllFile import DoAllFile_Dialog
 
 
 class mainD(QWidget):

@@ -1,0 +1,9 @@
+2018-01-21 14:19:37,315 - main[line:5] DEBUG - debug1
+2018-01-21 14:19:37,315 - utils[line:6] DEBUG - debug2
+2018-01-21 14:19:37,315 - exception[line:7] DEBUG - debug3
+2018-01-21 14:19:37,315 - main[line:11] INFO - info1
+2018-01-21 14:19:37,315 - main[line:11] INFO - info1
+2018-01-21 14:19:37,315 - utils[line:12] INFO - info2
+2018-01-21 14:19:37,315 - utils[line:12] INFO - info2
+2018-01-21 14:19:37,315 - exception[line:13] INFO - info3
+2018-01-21 14:19:37,315 - exception[line:13] INFO - info3
