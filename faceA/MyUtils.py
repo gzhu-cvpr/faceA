@@ -51,10 +51,11 @@ import logging
 
 def getLogger(name):
     logger = logging.getLogger(name)
-    logger.setLevel(logging.DEBUG)
-    formatter = logging.Formatter("%(asctime)s - %(name)s[line:%(lineno)d] %(levelname)s - %(message)s")
 
     if not logger.handlers:
+        logger.setLevel(logging.DEBUG)
+        formatter = logging.Formatter("%(asctime)s - %(name)s[line:%(lineno)d] %(levelname)s - %(message)s")
+
         fh = logging.FileHandler(".\myapp.log")
         fh.setLevel(logging.DEBUG)
         fh.setFormatter(formatter)
