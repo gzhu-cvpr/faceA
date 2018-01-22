@@ -60,10 +60,10 @@ def getLogger(name):
         fh.setFormatter(formatter)
         logger.addHandler(fh)
 
-        ch = logging.StreamHandler()
-        ch.setLevel(logging.ERROR)
-        ch.setFormatter(formatter)
-        logger.addHandler(ch)
+        sh = logging.StreamHandler()
+        sh.setLevel(logging.ERROR)
+        sh.setFormatter(formatter)
+        logger.addHandler(sh)
 
     return logger
 

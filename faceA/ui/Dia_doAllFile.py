@@ -2,7 +2,7 @@
 
 from PyQt5.QtWidgets import QDialog
 
-from .ui_source.Dia_PBar import Ui_Dia_PBar
+from faceA.ui.ui_base.Dia_PBar import Ui_Dia_PBar
 
 """
 显示处理事件进度的通用Dialog

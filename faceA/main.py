@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QWidget, QFileDialog
 from PyQt5.QtCore import pyqtSignal, QThread
 
 from faceA import MyUtils
-from faceA.ui.ui_source.Form_main import Ui_Form_main
+from faceA.ui.ui_base.Form_main import Ui_Form_main
 from faceA.ui.Dia_alter import Alter_Dialog
 from faceA.ui.Dia_doAllFile import DoAllFile_Dialog
 
@@ -33,8 +33,8 @@ class mainD(QWidget):
         # 初始化一些要用到的变量
         self.picpath = ''
         self.result = ''
-        self.picnum_toshow=0
-        self.picnum_haveshow=0
+        self.picnum_toshow = 0
+        self.picnum_haveshow = 0
         self.undoPath = r'.\resource\pic_undo'
         self.havedonedPath = r'.\resource\pic_havedone'
         self.doallfilethread = None
@@ -50,14 +50,19 @@ class mainD(QWidget):
                 self.ui.pushButton_6.setText("暂停展示")
                 return
 
-        self.picnum_haveshow=0
-        self.picnum_toshow=int(len(os.listdir(self.havedonedPath))/2)
-        self.ui.label_4.setText(str(self.picnum_haveshow)+"/"+str(self.picnum_toshow))
+        # 计算进度条
+        self.picnum_haveshow = 0
+        self.picnum_toshow = int(len(os.listdir(self.havedonedPath)) / 2)
+        self.ui.label_4.setText(str(self.picnum_haveshow) + "/" + str(self.picnum_toshow))
 
+        # 定义处理文件的线程
         self.doallfilethread = showFileThread()
 
+        # 定义好更新ui的槽连接
         self.ui.pushButton_6.setText("暂停展示")
         self.doallfilethread.shownew_signal.connect(self.showPicAndResult_connect)
+
+        # 定义好线程中的参数
         self.doallfilethread.setPath(self.havedonedPath)
         self.doallfilethread.setPicSize(self.ui.label.width(), self.ui.label.height())
         self.doallfilethread.start()
@@ -71,9 +76,11 @@ class mainD(QWidget):
 
     def openfile_button_connect(self):
         fname = QFileDialog.getOpenFileName(self, '打开文件', './')
-        self.picpath = fname[0]
 
-        if not (self.picpath[-4:] == '.png' or self.picpath[-4:] == '.jpg'):
+        self.picpath = fname[0]
+        MyUtils.getLogger(__name__).info("打开文件"+self.picpath)
+
+        if len(self.picpath) < 4 or not (self.picpath[-4:] == '.png' or self.picpath[-4:] == '.jpg'):
             Alter_Dialog("警报", "请选择jpg或者png文件").exec_()
             return
 
@@ -89,14 +96,16 @@ class mainD(QWidget):
         else:
             png = png.scaledToHeight(png.width() * self.ui.label.height() / png.height(), self.ui.label.height())
         # 把图像放到控件中显示
+        MyUtils.getLogger(__name__).info("展示图片"+self.picpath)
         self.ui.label.setPixmap(png)
 
     def analysisCurPic_button_connect(self):
-        if not (self.picpath[-4:] == '.png' or self.picpath[-4:] == '.jpg'):
+        if len(self.picpath) < 4 or not (self.picpath[-4:] == '.png' or self.picpath[-4:] == '.jpg'):
             Alter_Dialog("警报", "请选择jpg或者png文件").exec_()
         else:
             try:
                 self.showResult(MyUtils.getPicAnalysisResult(self.picpath))
+                MyUtils.getLogger(__name__).info("展示图片分析结果" + self.picpath)
             except Exception as e:
                 Alter_Dialog(e.__str__()).exec()
 
@@ -109,18 +118,22 @@ class mainD(QWidget):
     def doAllFile_button_connect(self):
         dfb = DoAllFile_Dialog("图片识别中……")
         dfb.setWindowFlags(QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowMinimizeButtonHint)
+        # 在子线程中处理文件
         _thread.start_new_thread(self.doAllFileinThread_threadfunction, (dfb, self.havedonedPath, self.undoPath))
         dfb.exec_()
 
+    # 展示全部文件线程的连接槽函数
     def showPicAndResult_connect(self, pic, result, picpath):
         self.ui.label.setPixmap(pic)
         self.picpath = picpath
         self.showResult(result)
-        self.picnum_haveshow+=1
-        self.ui.label_4.setText(str(self.picnum_haveshow)+"/"+str(self.picnum_toshow))
-        if(self.picnum_haveshow==self.picnum_toshow):
+        self.picnum_haveshow += 1
+        MyUtils.getLogger(__name__).info("展示图片及其结果"+picpath)
+        self.ui.label_4.setText(str(self.picnum_haveshow) + "/" + str(self.picnum_toshow))
+        if (self.picnum_haveshow == self.picnum_toshow):
             self.ui.pushButton_6.setText("展示识别结果")
 
+    # 处理所有文件线程中的运行函数
     def doAllFileinThread_threadfunction(self, dfb, havedonedPath, undoPath):
         i = (int)(len(os.listdir(havedonedPath)) / 2)
         j = i
@@ -159,7 +172,7 @@ class mainD(QWidget):
         dfb.ui.label.setText("识别已经完成")
         dfb.ui.pushButton.show()
 
-    # 这个函数被两个内部函数用到了,在这里写重试申请
+    # 这个函数被两个内部函数用到了,在这里写网络请求重试，如果结果是错误，则在这里会进行一次补救
     def showResult(self, result):
 
         resultobj = None
@@ -214,6 +227,7 @@ class mainD(QWidget):
         self.ui.label_2.setText(text)
 
 
+# 展示文件线程
 class showFileThread(QThread):
     shownew_signal = pyqtSignal(object, str, str)
 
@@ -234,7 +248,7 @@ class showFileThread(QThread):
             for file in files:
                 if self.thread_status == 1:
                     filepath = os.path.join(root, file)
-                    if not (filepath[-4:] == '.png' or filepath[-4:] == '.jpg'):
+                    if len(filepath) < 4 or not (filepath[-4:] == '.png' or filepath[-4:] == '.jpg'):
                         pass
                     else:
                         pic = QPixmap(filepath)
