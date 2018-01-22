@@ -3,7 +3,7 @@
 
 from PyQt5.QtWidgets import QDialog
 
-from .ui_source.Dia_alter import Ui_Dia_alter
+from faceA.ui.ui_base.Dia_alter import Ui_Dia_alter
 
 """
 显示提示信息的通用Dialog

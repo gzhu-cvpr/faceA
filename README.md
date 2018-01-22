@@ -45,9 +45,9 @@ dist是发行版的文件夹
 ## Installation：
 ### Requirrments
 * python 3.0+
-* requests (>2.13.0)
-* PyQt5(>5.8.0)
-  
+* requests (>=2.13.0)
+* PyQt5(>=5.8.0)
+* pyqt5-tools(>=5.9.0.1.2)
   
 ### install and run
 ```bash
