@@ -246,6 +246,9 @@ class showFileThread(QThread):
     def run(self):
         for root, dirs, files in os.walk(self.havedonedPath):
             for file in files:
+                while self.thread_status == 0:
+                    self.sleep(5)
+
                 if self.thread_status == 1:
                     filepath = os.path.join(root, file)
                     if len(filepath) < 4 or not (filepath[-4:] == '.png' or filepath[-4:] == '.jpg'):
@@ -271,9 +274,7 @@ class showFileThread(QThread):
                         self.sleep(3)
                 elif self.thread_status == -1:
                     return
-                else:
-                    while self.thread_status == 0:
-                        self.sleep(5)
+
         self.thread_status = -1
 
 

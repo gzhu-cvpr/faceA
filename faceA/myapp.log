@@ -14,3 +14,25 @@
 2018-01-22 09:27:19,337 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\6.jpg
 2018-01-22 09:27:22,354 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\7.jpg
 2018-01-22 09:27:25,380 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\8.png
+2018-01-22 10:41:24,640 - __main__[line:81] INFO - 打开文件D:/work/Github/faceA/faceA/resource/myFile/Lenna.jpg
+2018-01-22 10:41:24,640 - __main__[line:99] INFO - 展示图片D:/work/Github/faceA/faceA/resource/myFile/Lenna.jpg
+2018-01-22 10:41:27,339 - __main__[line:108] INFO - 展示图片分析结果D:/work/Github/faceA/faceA/resource/myFile/Lenna.jpg
+2018-01-22 10:41:30,463 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
+2018-01-22 10:41:33,471 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\1.jpg
+2018-01-22 10:41:36,486 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\2.jpg
+2018-01-22 10:41:39,498 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\3.jpg
+2018-01-22 10:41:42,514 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\4.jpg
+2018-01-22 10:41:45,530 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\5.jpg
+2018-01-22 10:41:48,546 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\6.jpg
+2018-01-22 10:41:51,555 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\7.jpg
+2018-01-22 10:41:54,564 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\8.png
+2018-01-22 10:41:57,685 - __main__[line:150] INFO - 读取 .\resource\pic_undo\README.md
+2018-01-22 10:41:57,685 - __main__[line:153] WARNING - README.md不是jpg或者png文件
+2018-01-22 19:15:42,400 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
+2018-01-22 19:15:45,411 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\1.jpg
+2018-01-22 19:15:48,428 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\2.jpg
+2018-01-22 19:16:01,456 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\3.jpg
+2018-01-22 19:16:04,472 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\4.jpg
+2018-01-22 19:16:07,480 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\5.jpg
+2018-01-22 19:16:09,645 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
+2018-01-22 19:16:12,658 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\1.jpg
