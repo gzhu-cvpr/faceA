@@ -1,6 +1,9 @@
 ## Description：
 这是一个基于pyqt的gui客户端程序，主要用来展示人脸属性识别的结果。目前调用了face++旷视公司的接口，此后会改造成，调用自己队伍训练结果的接口。
 
+## Attention
+MyUtils中调用face++接口的密钥要更改为自己的密钥，程序才能正常运作
+
 ## Project structure:
 ``` proj structure
 │  AUTHORS  
