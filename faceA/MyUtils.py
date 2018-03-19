@@ -23,8 +23,8 @@ def getPicAnalysisResult(pngpath):  #
 
     # 按照api文档调用face++的api，进行解析
     http_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
-    key = "BFr8pippepx0jLQ9R6WK3HGdxxH2XE8w"
-    secret = "IG0nuulyC93VY2GW-C9cZupZiuB3GaRg"
+    key = ""    #需要输入自己的密钥
+    secret = ""  #需要输入自己的密钥
 
     # return_landmark。要求返回的结果中包括点的定位信息
     # return_attributes。定义返回的结果中要包含的参数序列
