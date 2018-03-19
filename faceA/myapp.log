@@ -36,3 +36,50 @@
 2018-01-22 19:16:07,480 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\5.jpg
 2018-01-22 19:16:09,645 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
 2018-01-22 19:16:12,658 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\1.jpg
+2018-03-18 21:17:08,257 - __main__[line:81] INFO - 打开文件D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:17:08,270 - __main__[line:99] INFO - 展示图片D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:17:31,484 - __main__[line:81] INFO - 打开文件D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:17:31,491 - __main__[line:99] INFO - 展示图片D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:17:45,958 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
+2018-03-18 21:17:48,969 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\1.jpg
+2018-03-18 21:17:51,971 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\2.jpg
+2018-03-18 21:17:54,973 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\3.jpg
+2018-03-18 21:17:57,976 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\4.jpg
+2018-03-18 21:18:00,982 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\5.jpg
+2018-03-18 21:18:03,986 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\6.jpg
+2018-03-18 21:18:08,010 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
+2018-03-18 21:18:10,746 - __main__[line:150] INFO - 读取 .\resource\pic_undo\README.md
+2018-03-18 21:18:10,747 - __main__[line:153] WARNING - README.md不是jpg或者png文件
+2018-03-18 21:18:50,830 - __main__[line:81] INFO - 打开文件
+2018-03-18 21:19:00,375 - __main__[line:81] INFO - 打开文件D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:19:00,379 - __main__[line:99] INFO - 展示图片D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:23:40,640 - __main__[line:81] INFO - 打开文件D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:23:40,647 - __main__[line:99] INFO - 展示图片D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:24:53,200 - __main__[line:81] INFO - 打开文件D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:24:53,206 - __main__[line:99] INFO - 展示图片D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-18 21:24:55,627 - __main__[line:108] INFO - 展示图片分析结果D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-19 09:53:28,286 - __main__[line:81] INFO - 打开文件D:/work/project/py/faceA/faceA/main.py
+2018-03-19 09:53:33,763 - __main__[line:81] INFO - 打开文件D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-19 09:53:33,778 - __main__[line:99] INFO - 展示图片D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-19 09:53:36,624 - __main__[line:108] INFO - 展示图片分析结果D:/work/project/py/faceA/faceA/resource/myFile/Lenna.jpg
+2018-03-19 09:53:50,043 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
+2018-03-19 09:53:53,052 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\1.jpg
+2018-03-19 09:53:56,056 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\2.jpg
+2018-03-19 09:54:37,254 - __main__[line:150] INFO - 读取 .\resource\pic_undo\0.jpg
+2018-03-19 09:54:38,337 - __main__[line:150] INFO - 读取 .\resource\pic_undo\1.jpg
+2018-03-19 09:54:39,141 - __main__[line:150] INFO - 读取 .\resource\pic_undo\2.jpg
+2018-03-19 09:54:39,850 - __main__[line:150] INFO - 读取 .\resource\pic_undo\3.jpg
+2018-03-19 09:54:40,518 - __main__[line:150] INFO - 读取 .\resource\pic_undo\4.jpg
+2018-03-19 09:54:41,189 - __main__[line:150] INFO - 读取 .\resource\pic_undo\5.jpg
+2018-03-19 09:54:42,490 - __main__[line:150] INFO - 读取 .\resource\pic_undo\6.jpg
+2018-03-19 09:54:43,265 - __main__[line:150] INFO - 读取 .\resource\pic_undo\7.jpg
+2018-03-19 09:54:43,860 - __main__[line:150] INFO - 读取 .\resource\pic_undo\8.png
+2018-03-19 09:54:48,327 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\0.jpg
+2018-03-19 09:54:51,329 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\1.jpg
+2018-03-19 09:54:54,328 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\2.jpg
+2018-03-19 09:54:57,331 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\3.jpg
+2018-03-19 09:55:00,332 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\4.jpg
+2018-03-19 09:55:03,338 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\5.jpg
+2018-03-19 09:55:06,343 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\6.jpg
+2018-03-19 09:55:09,347 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\7.jpg
+2018-03-19 09:55:12,366 - __main__[line:131] INFO - 展示图片及其结果.\resource\pic_havedone\8.png
